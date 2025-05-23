@@ -1,0 +1,598 @@
+ * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   scroll-behavior: smooth;
+ }
+
+ body {
+   background-color: #f0f4f8;
+   color: #7ce725;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   line-height: 1.6;
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+ }
+
+ * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.nav-bar {
+  width: 100%;
+  /* background-color: white; */
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  box-sizing: border-box;
+  flex-wrap: wrap; /* allows wrapping on small screens */
+}
+
+.logo-div {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 0 0 auto;
+  border-bottom: 3px lightgreen;
+}
+
+.logo-div img {
+  width: 50px;
+  height: auto;
+}
+
+#name {
+  color: #8338ec;
+  margin-left: 20px;
+  font-size: 24px;
+  border-bottom: 2px solid green;
+  white-space: nowrap; /* prevent word breaking */
+}
+
+
+
+ a {
+   color: #3a86ff;
+   text-decoration: none;
+ }
+
+ a:hover {
+   color: #8338ec;
+ }
+
+ /* Header */
+ header {
+   background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1950&q=80') no-repeat center/cover;
+   height:50vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   padding: 0 20px;
+   color: #ffbe0b;
+   position: relative;
+   flex-shrink: 0;
+ }
+
+ header::after {
+   content: "";
+   position: absolute;
+   inset: 0;
+   background: rgba(240, 244, 248, 0.60);
+   z-index: 0;
+ }
+
+ header h1 {
+   font-size: 3.5rem;
+   font-weight: 600;
+   z-index: 1;
+   margin-bottom: 15px;
+   color: darkgreen;
+ }
+
+ header p {
+   font-size: 1.5rem;
+   font-weight: 300;
+   max-width: 600px;
+   color: purple;
+   z-index: 1;
+ }
+
+ /* Navigation */
+ nav {
+   background: #ffffff;
+   display: flex;
+   justify-content: center;
+   padding: 15px 0;
+   gap: 30px;
+   font-weight: 600;
+   font-size: 1rem;
+   position: sticky;
+   top: 0;
+   z-index: 100;
+   color: #1e1e2f;
+   flex-shrink: 0;
+ }
+
+ nav a:hover {
+   color: #8338ec;
+ }
+
+ /* Section common */
+ section {
+   max-width: 1100px;
+   margin: 60px auto;
+   padding: 0 20px;
+ }
+
+ section h2 {
+   color: #3a86ff;
+   font-weight: 600;
+   font-size: 2.5rem;
+   margin-bottom: 30px;
+   text-align: center;
+ }
+
+ /* About */
+ .about-text {
+   color: #555a7a;
+   font-size: 1.1rem;
+   max-width: 850px;
+   margin: 0 auto;
+   text-align: center;
+   line-height: 1.7;
+   /* text-wrap: justify; */
+ }
+ .certificates {
+   display: flex;
+   gap: 30px;
+    justify-content: center;
+    align-items: center;
+   /* background-color: #00ff7f; */
+   margin-top: 0px;
+   margin-bottom: 10px;
+   height: 400px;
+   width: 100%;
+ }
+.certficate{
+  width: 300px;
+  background-image: url(./assets/certificate1.png);
+  background-size: cover;
+  background-position: center;
+ box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  height: 100%;
+}
+.certficate2{
+  width: 330px;
+  /* background-image: url(./assets/certificate2.jpg); */
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+ /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+  height: 80%;
+}
+.certficate2 img{
+  height: 70%;
+  object-fit: cover;
+}
+.certficate3{
+  width: 330px;
+  /* background-image: url(./assets/certificate2.jpg); */
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+ /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+  height: 80%;
+}
+.certficate3 img{
+  height: 70%;
+  object-fit: cover;
+}
+
+ /* Experts */
+ .experts {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 30px;
+ }
+
+ .expert-card {
+   background: #ffffff;
+   border-radius: 15px;
+   overflow: hidden;
+   box-shadow: 0 4px 15px rgba(58, 134, 255, 0.3);
+   width: 280px;
+   text-align: center;
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+   color: #1e1e2f;
+   flex-shrink: 0;
+ }
+
+ .expert-card:hover {
+   transform: translateY(-10px);
+   box-shadow: 0 8px 30px rgba(58, 134, 255, 0.6);
+ }
+
+ .expert-card img {
+   width: 100%;
+   height: 280px;
+   object-fit: cover;
+   border-bottom: 3px solid #3a86ff;
+ }
+
+ .expert-card h3 {
+   margin: 15px 0 8px;
+   color: #8338ec;
+   font-weight: 600;
+   font-size: 1.4rem;
+ }
+
+ .expert-card p {
+   font-weight: 300;
+   font-size: 1rem;
+   padding: 0 15px 20px;
+   color: #555a7a;
+ }
+
+ /* Services */
+ .services-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+   gap: 25px;
+ }
+
+ .service-item {
+   background: #ffffff;
+   padding: 25px;
+   border-radius: 15px;
+   box-shadow: 0 4px 15px rgba(58, 134, 255, 0.3);
+   transition: background 0.3s ease;
+   cursor: default;
+   color: #1e1e2f;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+ }
+
+ .service-item:hover {
+   background: #e0e7ff;
+ }
+
+ .service-item h4 {
+   color: #3a86ff;
+   margin-bottom: 15px;
+   font-weight: 600;
+   font-size: 1.3rem;
+ }
+
+ .service-item p {
+   font-weight: 300;
+   font-size: 1rem;
+   line-height: 1.6;
+   color: #555a7a;
+   flex-grow: 1;
+ }
+
+ /* Testimonials */
+ .testimonials {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   gap: 25px;
+ }
+
+ .testimonial-card {
+   background: #ffffff;
+   box-shadow: 0 4px 15px rgba(58, 134, 255, 0.3);
+   border-radius: 15px;
+   padding: 25px;
+   max-width: 420px;
+   font-style: italic;
+   color: #555a7a;
+   position: relative;
+   transition: box-shadow 0.3s ease;
+   flex-shrink: 0;
+ }
+
+ .testimonial-card:hover {
+   box-shadow: 0 8px 30px rgba(58, 134, 255, 0.7);
+ }
+
+ .testimonial-card::before {
+   content: "“";
+   font-size: 3rem;
+   position: absolute;
+   top: 10px;
+   left: 20px;
+   color: #3a86ff;
+   opacity: 0.3;
+   font-family: serif;
+ }
+
+ .testimonial-author {
+   margin-top: 20px;
+   font-weight: 600;
+   color: #3a86ff;
+   text-align: right;
+ }
+
+ /* Contact */
+ form {
+   max-width: 500px;
+   margin: 0 auto;
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+ }
+
+ input,
+ textarea {
+   background: #f0f4f8;
+   color: #1e1e2f;
+   border: 1px solid #ccc;
+   border-radius: 8px;
+   padding: 12px 15px;
+   font-size: 1rem;
+   font-family: inherit;
+   resize: vertical;
+   transition: border-color 0.3s ease;
+ }
+
+ input:focus,
+ textarea:focus {
+   border-color: #3a86ff;
+   outline: none;
+   background: #ffffff;
+ }
+
+ .error-message {
+   color: #ff4c4c;
+   font-size: 0.9rem;
+   margin-bottom: 10px;
+ }
+
+ .success-message {
+   background: rgba(0, 255, 128, 0.2);
+   border: 1.5px solid #00ff7f;
+   padding: 10px 15px;
+   border-radius: 8px;
+   color: #00ff7f;
+   font-weight: 600;
+   margin-bottom: 15px;
+ }
+
+ .error-message-global {
+   background: rgba(255, 76, 76, 0.2);
+   border: 1.5px solid #ff4c4c;
+   padding: 10px 15px;
+   border-radius: 8px;
+   color: #ff4c4c;
+   font-weight: 600;
+   margin-bottom: 15px;
+ }
+
+ button {
+   background: #ffbe0b;
+   color: #1e1e2f;
+   border: none;
+   padding: 15px;
+   font-size: 1.2rem;
+   font-weight: 600;
+   border-radius: 8px;
+   cursor: pointer;
+   transition: background 0.3s ease;
+ }
+
+ button:hover {
+   background: #e0a800;
+ }
+
+ h1 {
+   text-align: center;
+   font-size: 2.5rem;
+   color: #222;
+   margin-bottom: 2rem;
+ }
+
+ .services-container {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+   gap: 1.5rem;
+   padding: 1rem;
+ }
+
+ .service-card {
+   background-color: #ffffff;
+   border-radius: 15px;
+   padding: 1.5rem;
+   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+   transition: transform 0.3s ease;
+ }
+
+ .service-card:hover {
+   transform: translateY(-8px);
+ }
+
+ .service-card img {
+   width: 80px;
+   height: 80px;
+   object-fit: contain;
+   margin-bottom: 1rem;
+ }
+
+ .service-card h3 {
+   font-size: 1.1rem;
+   font-weight: 600;
+   color: #333;
+ }
+
+
+
+ /* Footer */
+ footer {
+   background: #d4d9e2;
+   padding: 20px 0;
+   text-align: center;
+   color: #555a7a;
+   font-size: 0.9rem;
+   margin-top: 60px;
+   flex-shrink: 0;
+ }
+
+ .social-icon a {
+   font-size: 26px !important;
+   margin: 10px;
+ }
+
+ /* Responsive typography */
+ @media (max-width: 768px) {
+
+   header h1 {
+     font-size: 2.8rem;
+   }
+
+   header p {
+     font-size: 1.2rem;
+   }
+
+   section h2 {
+     font-size: 2rem;
+   }
+
+   h1 {
+     font-size: 2rem;
+   }
+
+   .service-card img {
+     width: 60px;
+     height: 60px;
+   }
+
+  
+ }
+
+ @media (max-width: 480px) {
+   header h1 {
+     font-size: 2.4rem;
+   }
+
+   header p {
+     font-size: 1rem;
+   }
+
+   nav {
+     flex-wrap: wrap;
+     gap: 15px;
+     font-size: 0.9rem;
+   }
+
+   .experts,
+   .testimonials {
+     flex-direction: column;
+     align-items: center;
+   }
+
+   .expert-card,
+   .testimonial-card {
+     width: 90%;
+   }
+
+   .services-grid {
+     grid-template-columns: 1fr;
+   }
+
+   form {
+     width: 100%;
+   }
+ 
+ }
+
+ /* Responsive styles */
+@media (max-width: 600px) {
+  .nav-bar {
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    text-align: center;
+  }
+
+  .logo-div {
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 8px;
+  }
+
+  #name {
+    margin: 0;
+    font-size: 20px;
+  }
+
+  .logo-div img {
+    width: 80px;
+  }
+}
+@media (max-width: 1024px) {
+  .certificates {
+    flex-wrap: wrap;
+    gap: 20px;
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .certficate, .certficate2, .certficate3 {
+    width: 45%;
+    height: 250px; /* Now fixed height for better control */
+  }
+
+  .certficate2 img,
+  .certficate3 img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 768px) {
+  .certificates {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .certficate, .certficate2, .certficate3 {
+    width: 80%;
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .certficate{
+    width: 90%;
+    height: 480px;
+    margin-bottom: 20px;
+  }
+
+
+  .certficate2 img,
+  .certficate3 img {
+    height: 100%;
+    width: 100%;
+  }
+}
